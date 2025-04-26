@@ -5,7 +5,7 @@ Version:    1.1
 Developer:	Nazar Miller (millerDigitalDesign)
 Portfolio:  https://themeforest.net/user/millerdigitaldesign/portfolio?ref=MillerDigitalDesign
 
-p.s. I am available for Freelance hire (UI design, web development). email: miller.themes@gmail.com
+p.s. I am available for Freelance hire (UI  التصميم , web development). email: miller.themes@gmail.com
 
 ------------------------------------------- */
 
@@ -464,7 +464,7 @@ $(function () {
   }
 
   $container.after(
-    '<div class="mil-load-more mil-up"><button id="load-more">Load More</button></div>'
+    '<div class="mil-load-more mil-up"><button id="load-more">عرض المزيد</button></div>'
   );
 
   $("#load-more").on("click", function () {

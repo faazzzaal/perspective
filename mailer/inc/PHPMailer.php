@@ -61,7 +61,7 @@ class PHPMailer
     const ICAL_METHOD_DECLINECOUNTER = 'DECLINECOUNTER';
 
     /**
-     * Email priority.
+     * البريد الالكتروني  priority.
      * Options: null (default), 1 = High, 3 = Normal, 5 = low.
      * When null, the header is not set at all.
      *
@@ -1446,7 +1446,7 @@ class PHPMailer
 
     /**
      * Converts IDN in given email address to its ASCII form, also known as punycode, if possible.
-     * Important: Address must be passed in same encoding as currently set in PHPMailer::$CharSet.
+     * Important: العنوان must be passed in same encoding as currently set in PHPMailer::$CharSet.
      * This function silently returns unmodified address if:
      * - No conversion is necessary (i.e. domain name is not an IDN, or is already in ASCII form)
      * - Conversion to punycode is impossible (e.g. required PHP functions are not available)

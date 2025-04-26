@@ -20,8 +20,8 @@ if ( !empty($_POST) ) {
 	$messages  = "<h3>New message from the site " .$fromName. "</h3> \r\n";
 	$messages .= "<ul>";
 	$messages .= "<li><strong>Name: </strong>" .$name."</li>";
-	$messages .= "<li><strong>Email: </strong>" .$email."</li>";
-	$messages .= "<li><strong>Phone: </strong>" .$tel."</li>";
+	$messages .= "<li><strong>البريد الالكتروني : </strong>" .$email."</li>";
+	$messages .= "<li><strong>الهاتف: </strong>" .$tel."</li>";
 	$messages .= "<li><strong>Budget: </strong>" .$budget."</li>";
 	$messages .= "<li><strong>Message: </strong>" .$message."</li>";
 	$messages .= "</ul> \r\n";
@@ -32,8 +32,8 @@ if ( !empty($_POST) ) {
     //$mail->isSMTP();
     //$mail->Host = 'your_smtp_host'; // Your SMTP Host
     //$mail->SMTPAuth = true;
-    //$mail->Username = 'your_email_address'; // Your Email Address
-    //$mail->Password = 'your_password'; // Your Email Password
+    //$mail->Username = 'your_email_address'; // Your البريد الالكتروني  العنوان
+    //$mail->Password = 'your_password'; // Your البريد الالكتروني  Password
     //$mail->Port = 465; // SMTP Port
 
     //Recipients
