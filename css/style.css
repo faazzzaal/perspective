@@ -1336,7 +1336,7 @@ illustrations
   object-position: center;
 }
 
-.avtr-image img{
+.avtr-image img {
   height: 120% !important;
 }
 .mil-illustration-slider-frame {
@@ -3346,4 +3346,8 @@ timer
   position: absolute;
   left: 0;
   z-index: 0;
+}
+
+.gap-4 {
+  grid-gap: 15px;
 }
