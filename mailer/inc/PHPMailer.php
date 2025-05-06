@@ -857,7 +857,7 @@ class PHPMailer
      */
     private function mailPassthru($to, $subject, $body, $header, $params)
     {
-        //Check overloading of mail function to avoid double-encoding
+        //Check overloading of mail function to avoid doublecoding
         if ((int)ini_get('mbstring.func_overload') & 1) {
             $subject = $this->secureHeader($subject);
         } else {
@@ -1235,7 +1235,7 @@ class PHPMailer
                     ) {
                         $origCharset = mb_internal_encoding();
                         mb_internal_encoding($charset);
-                        //Undo any RFC2047-encoded spaces-as-underscores
+                        //Undo any RFC2047coded spaces-as-underscores
                         $address->personal = str_replace('_', '=20', $address->personal);
                         //Decode the name
                         $address->personal = mb_decode_mimeheader($address->personal);
@@ -1272,7 +1272,7 @@ class PHPMailer
                         if (defined('MB_CASE_UPPER') && preg_match('/^=\?.*\?=$/s', $name)) {
                             $origCharset = mb_internal_encoding();
                             mb_internal_encoding($charset);
-                            //Undo any RFC2047-encoded spaces-as-underscores
+                            //Undo any RFC2047coded spaces-as-underscores
                             $name = str_replace('_', '=20', $name);
                             //Decode the name
                             $name = mb_decode_mimeheader($name);
@@ -2743,11 +2743,11 @@ class PHPMailer
             //RFC 2045 section 6.4 says multipart MIME parts may only use 7bit, 8bit or binary CTE
             if ($ismultipart) {
                 if (static::ENCODING_8BIT === $this->Encoding) {
-                    $result .= $this->headerLine('Content-Transfer-Encoding', static::ENCODING_8BIT);
+                    $result .= $this->headerLine('Content-Transfercoding', static::ENCODING_8BIT);
                 }
                 //The only remaining alternatives are quoted-printable and base64, which are both 7bit compatible
             } else {
-                $result .= $this->headerLine('Content-Transfer-Encoding', $this->Encoding);
+                $result .= $this->headerLine('Content-Transfercoding', $this->Encoding);
             }
         }
 
@@ -3121,7 +3121,7 @@ class PHPMailer
         $result .= static::$LE;
         //RFC1341 part 5 says 7bit is assumed if not specified
         if (static::ENCODING_7BIT !== $encoding) {
-            $result .= $this->headerLine('Content-Transfer-Encoding', $encoding);
+            $result .= $this->headerLine('Content-Transfercoding', $encoding);
         }
         $result .= static::$LE;
 
@@ -3328,7 +3328,7 @@ class PHPMailer
                 }
                 //RFC1341 part 5 says 7bit is assumed if not specified
                 if (static::ENCODING_7BIT !== $encoding) {
-                    $mime[] = sprintf('Content-Transfer-Encoding: %s%s', $encoding, static::$LE);
+                    $mime[] = sprintf('Content-Transfercoding: %s%s', $encoding, static::$LE);
                 }
 
                 //Only set Content-IDs on inline attachments
@@ -3508,13 +3508,13 @@ class PHPMailer
 
         //Select the encoding that produces the shortest output and/or prevents corruption.
         if ($matchcount > strlen($str) / 3) {
-            //More than 1/3 of the content needs encoding, use B-encode.
+            //More than 1/3 of the content needs encoding, use Bcode.
             $encoding = 'B';
         } elseif ($matchcount > 0) {
-            //Less than 1/3 of the content needs encoding, use Q-encode.
+            //Less than 1/3 of the content needs encoding, use Qcode.
             $encoding = 'Q';
         } elseif (strlen($str) > $maxlen) {
-            //No encoding needed, but value exceeds max line length, use Q-encode to prevent corruption.
+            //No encoding needed, but value exceeds max line length, use Qcode to prevent corruption.
             $encoding = 'Q';
         } else {
             //No reformatting needed
@@ -3581,7 +3581,7 @@ class PHPMailer
      * without breaking lines within a character.
      * Adapted from a function by paravoid.
      *
-     * @see http://www.php.net/manual/en/function.mb-encode-mimeheader.php#60283
+     * @see http://www.php.net/manual/en/function.mbcode-mimeheader.php#60283
      *
      * @param string $str       multi-byte text to wrap encode
      * @param string $linebreak string to use as linefeed/end-of-line
@@ -3672,7 +3672,7 @@ class PHPMailer
         $matches = [];
         if (preg_match_all("/[{$pattern}]/", $encoded, $matches)) {
             //If the string contains an '=', make sure it's the first thing we replace
-            //so as to avoid double-encoding
+            //so as to avoid doublecoding
             $eqkey = array_search('=', $matches[0], true);
             if (false !== $eqkey) {
                 unset($matches[0][$eqkey]);
@@ -4721,7 +4721,7 @@ class PHPMailer
     }
 
     /**
-     * Quoted-Printable-encode a DKIM header.
+     * Quoted-Printablecode a DKIM header.
      *
      * @param string $txt
      *

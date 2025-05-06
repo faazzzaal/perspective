@@ -117,7 +117,7 @@ class OAuth implements OAuthTokenProvider
     }
 
     /**
-     * Generate a base64-encoded OAuth token.
+     * Generate a base64coded OAuth token.
      *
      * @return string
      */

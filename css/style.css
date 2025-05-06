@@ -865,7 +865,7 @@ spaces
 .mil-adaptive-right {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flexd;
 }
 @media screen and (max-width: 992px) {
   .mil-adaptive-right {
@@ -985,7 +985,7 @@ banner
 .mil-banner .container {
   height: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: flexd;
 }
 .mil-banner .mil-banner-content {
   padding: 0 0 30px;
@@ -1045,7 +1045,7 @@ slider navigation
 .mil-banner-slider-panel {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flexd;
 }
 @media screen and (max-width: 992px) {
   .mil-banner-slider-panel {
@@ -2469,7 +2469,7 @@ process
 .mil-process-box:hover .mil-icon {
   border-color: #0000ff;
 }
-.mil-process-box.mil-process-end:before {
+.mil-process-box.mil-processd:before {
   display: none;
 }
 
@@ -3252,7 +3252,7 @@ timer
 
 .mil-timer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flexd;
 }
 .mil-timer .mil-timer-item {
   position: relative;
