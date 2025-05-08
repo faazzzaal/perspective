@@ -1336,7 +1336,7 @@ illustrations
   object-position: center;
 }
 
-.avtr-image img{
+.avtr-image img {
   height: 120% !important;
 }
 .mil-illustration-slider-frame {
@@ -3350,4 +3350,17 @@ load more
 
 .gap-4 {
   grid-gap: 15px;
+}
+.mil-top-panel .mil-button.mil-sm {
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .mil-button.mil-sm {
+    padding: 0 30px;
+    height: 50px;
+  }
+  .mil-logo img {
+    max-width: 120px;
+  }
 }
