@@ -3404,6 +3404,14 @@ html[dir="rtl"] .mil-link.mil-left-link {
   gap: 15px;
 }
 
+html[dir="rtl"] .mil-footer-navigation nav ul li:last-child {
+  margin-right: 30px;
+}
+
+html[dir="rtl"] .mil-accordion-group .mil-accordion-menu h6 {
+  margin-right: 25px;
+}
+
 @media (max-width: 767px) {
   .mil-button.mil-sm {
     padding: 0 30px;
