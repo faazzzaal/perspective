@@ -3355,6 +3355,55 @@ load more
   color: #fff;
 }
 
+html[dir="rtl"] .mil-link .mil-arrow {
+  margin-right: 16px;
+  margin-left: 0;
+}
+
+html[dir="rtl"] .mil-img-wrapper {
+  left: -100px;
+  right: inherit;
+}
+
+html[dir="rtl"] .mil-phone-box {
+  padding-right: 30px;
+  padding-left: 0;
+  text-align: right;
+}
+
+html[dir="rtl"] .mil-icon-list li img {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+html[dir="rtl"] .mil-hww {
+  padding-left: 0;
+  padding-right: 30px;
+}
+
+html[dir="rtl"] .mil-list li:before {
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+html[dir="rtl"] .mil-checbox-frame .mil-checkbox + label:before {
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+html[dir="rtl"] .mil-checbox-frame .mil-checkbox:checked + label:after {
+  right: 13px;
+  left: unset;
+}
+
+html[dir="rtl"] .mil-nav-buttons .mil-slider-button {
+  padding-left: 30px;
+}
+
+html[dir="rtl"] .mil-link.mil-left-link {
+  gap: 15px;
+}
+
 @media (max-width: 767px) {
   .mil-button.mil-sm {
     padding: 0 30px;
